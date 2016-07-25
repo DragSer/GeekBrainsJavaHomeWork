@@ -10,5 +10,11 @@ public class TestTmp {
                 System.out.println("a["+a[i]+"] - не является числом");
             }
         }
+
+        String s1 = "123";
+        String s2 = "12q";
+
+        System.out.println(s1.matches("\\d+"));
+        System.out.println(s2.matches("\\d+"));
     }
 }

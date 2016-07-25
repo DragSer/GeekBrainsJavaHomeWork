@@ -23,7 +23,7 @@ public class Cat extends Animal {
         if (swim.equals(this.swim)){
             System.out.print("2 вопрос - верно!");
         } else {
-            System.out.println("2 вопрос - ошибка!");
+            System.out.print("2 вопрос - ошибка!\n"+name+" не плавает");
         }
     }
 

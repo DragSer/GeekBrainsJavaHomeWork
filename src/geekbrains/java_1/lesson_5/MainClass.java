@@ -35,27 +35,25 @@ public class MainClass {
         animals[1] = new Dog("Собака");
         animals[2] = new Horse("Лошадь");
 
-        int speed;      //Скорость бега
+        int speed;    //Скорость бега
         String swim;    // Плавает ли животное
-        int jump;       // Высота прыжка
-
+        int jump;     // Высота прыжка
 
         System.out.println("ЗооТест");
 
         System.out.println("С какой максимальной скоростью (км/ч) может бежать лошадь?");
         System.out.print(">> ");
-        speed = input.nextInt();
+        while (true) {
+            String speed_str = input.next();
+            try {
+                speed = new Integer(speed_str);
+                break;
+            }catch (NumberFormatException e) {
+                System.err.println("Неверный формат числа!");
+            }
+        }
 
-//        while (true) {
-//            speed = input.nextInt();
-//            if (speed < 0) {
-//                System.out.println("Скорость должна быть не отрицательным числом. Повторите ввод:");
-//            }else{
-//                break;
-//            }
-//        }
-
-        System.out.println("Плавает ли " + animals[0]+"? (Y/N)");
+        System.out.println("Плавает ли кошка? (Y/N)");
         while (true) {
             swim = input.next();
             swim = swim.toUpperCase();
@@ -67,19 +65,17 @@ public class MainClass {
         }
 
         System.out.println("На какую высоту (м) прыгает собака?");
-        jump = input.nextInt();
+//        jump = input.nextInt();
 
-//        while(true) {
-////            jump = input.nextInt();
-//            jump = 0;
-//            if(input.hasNextInt() && jump >= 0) {
-//                System.out.println("Ответы приняты." + jump);
-//                break;
-//            } else {
-//                System.out.println("Высота должна быть не отрицательным числом. Повторите ввод:");
-//
-//            }
-//        }
+        while(true) {
+            String jump_str = input.next();
+            try {
+                jump = new Integer(jump_str);
+                break;
+            }catch (NumberFormatException e) {
+                System.err.println("Неверный формат числа!");
+            }
+        }
 
         System.out.println("-------------------------------------");
         System.out.println("Правильные ответы:");
