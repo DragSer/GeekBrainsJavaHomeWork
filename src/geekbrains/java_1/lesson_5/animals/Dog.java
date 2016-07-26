@@ -1,10 +1,10 @@
 package geekbrains.java_1.lesson_5.animals;
 
 public class Dog extends Animal {
-    protected String name;
-    protected int speed = 67;
-    protected int jump = 1;
-    protected String swim = "Y";
+
+    private final int speed = 67;
+    private final int jump = 1;
+    private final String swim = "Y";
 
     public Dog(String name){ super(name); }
 

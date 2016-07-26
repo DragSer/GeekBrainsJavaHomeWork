@@ -2,9 +2,9 @@ package geekbrains.java_1.lesson_5.animals;
 
 public class Horse extends Animal {
 
-    protected int speed = 69;
-    protected int jump = 1;
-    protected String swim = "Y";
+    private final int speed = 69;
+    private final int jump = 1;
+    private final String swim = "Y";
 
     public Horse(String name) { super(name); }
 
